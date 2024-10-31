@@ -1,0 +1,67 @@
+{
+    "nodes": {
+        "a1fc7322-4aaa-406e-863a-c92322846b73": {
+            "type": "filter",
+            "name": "filter",
+            "position": [
+                -1185.1732177734375,
+                -668.7645874023438
+            ],
+            "filter": "*.jpg",
+            "regex": false,
+            "negate": false,
+            "size": [
+                200,
+                50
+            ]
+        },
+        "e7636bf3-b25c-42ab-8207-407124cadd02": {
+            "type": "command",
+            "name": "Show",
+            "position": [
+                -130.15811157226563,
+                -676.4960327148438
+            ],
+            "command": "start %INPUT%",
+            "batch": false,
+            "outputfile": "",
+            "size": [
+                486,
+                130
+            ]
+        },
+        "f6ea9691-85dd-4306-ab5e-67c13a3b5dab": {
+            "type": "command",
+            "name": "Montage",
+            "position": [
+                -785.2096557617188,
+                -563.7028198242188
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe montage -quiet -label '%f' -background '#000000' -define jpeg:size=%THUMBWIDTH%x%THUMBHEIGHT% -geometry %THUMBWIDTH%x%THUMBHEIGHT%+2+2 -auto-orient %INPUT% %OUTPUT%",
+            "batch": true,
+            "outputfile": "%OUTPUTDIR%/contact_sheet.jpg",
+            "size": [
+                447,
+                223
+            ]
+        }
+    },
+    "connections": [
+        [
+            "f6ea9691-85dd-4306-ab5e-67c13a3b5dab",
+            "e7636bf3-b25c-42ab-8207-407124cadd02"
+        ],
+        [
+            "a1fc7322-4aaa-406e-863a-c92322846b73",
+            "f6ea9691-85dd-4306-ab5e-67c13a3b5dab"
+        ]
+    ],
+    "environment": {
+        "OUTPUTDIR": "%USERPROFILE%\\Desktop",
+        "THUMBHEIGHT": "200",
+        "THUMBWIDTH": "200"
+    },
+    "notes": {
+        "text": "This graph uses the ImageMagick library.\n\nInstall from a command shell using:\n\n    winget install ImageMagick.Q16-HDRI\n\nDrag-n-drop some files into the graph, hit the Execute button and a contactsheet of thumbnails will be generated named \"contact_sheet.jpg\". By default it's written to the Desktop. The graph will then launch the default viewer for images. The filter node removes all file types except JPGs. Thumbnail dimensions can be changed using the variables panel."
+    }
+}
