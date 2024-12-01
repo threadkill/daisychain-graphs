@@ -1,0 +1,186 @@
+{
+    "nodes": {
+        "1eff159a-5760-42b9-8cc8-26fec6872a72": {
+            "type": "command",
+            "name": "blur3",
+            "position": [
+                -1448.2408447265625,
+                -917.1629638671875
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% -gaussian-blur 0x8 %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur3.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "488e92bc-cae2-4f65-91b1-09def1546f49": {
+            "type": "command",
+            "name": "blur2",
+            "position": [
+                -1446.95947265625,
+                -1155.6253662109375
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% -gaussian-blur 0x4 %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur2.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "58e38644-b367-48c3-80ac-80376bf2ae1f": {
+            "type": "command",
+            "name": "blur5",
+            "position": [
+                -1449.9267578125,
+                -460.2674560546875
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% -gaussian-blur 0x32 %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur5.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "6db418d8-5f99-4f16-bec0-3dd2d922012a": {
+            "type": "command",
+            "name": "blur4",
+            "position": [
+                -1444.868896484375,
+                -694.6160888671875
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% -gaussian-blur 0x16 %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur4.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "6edca0ec-c4ac-48f6-b6d1-746ff778f974": {
+            "type": "concat",
+            "name": "concat",
+            "position": [
+                -705.028564453125,
+                -830.30224609375
+            ]
+        },
+        "75ebe495-9e84-44ee-b476-8c9bbe27ba27": {
+            "type": "command",
+            "name": "blur1",
+            "position": [
+                -1446.95947265625,
+                -1405.6871337890625
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% -gaussian-blur 0x2 %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur1.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628": {
+            "type": "concat",
+            "name": "concat",
+            "position": [
+                -847.7822875976563,
+                -941.0092163085938
+            ]
+        },
+        "cece3d61-ca7d-4e9b-9674-eda022232969": {
+            "type": "command",
+            "name": "blur6",
+            "position": [
+                -1452.556884765625,
+                -234.68582153320313
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% %OUTPUT%",
+            "batch": false,
+            "outputfile": "%OUTPUTDIR%/blur0.png",
+            "size": [
+                350,
+                130
+            ]
+        },
+        "e7636bf3-b25c-42ab-8207-407124cadd02": {
+            "type": "command",
+            "name": "Show",
+            "position": [
+                25.4315128326416,
+                -835.3982543945313
+            ],
+            "command": "start %INPUT%",
+            "batch": false,
+            "outputfile": "",
+            "size": [
+                486,
+                130
+            ]
+        },
+        "f6ea9691-85dd-4306-ab5e-67c13a3b5dab": {
+            "type": "command",
+            "name": "Montage",
+            "position": [
+                -587.1024780273438,
+                -828.81689453125
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe montage -label '%f' -font Arial -fill white -background '#000000' -define jpeg:size=%THUMBWIDTH%x%THUMBHEIGHT% -geometry %THUMBWIDTH%x%THUMBHEIGHT%+2+2 -auto-orient %INPUT% %OUTPUT%",
+            "batch": true,
+            "outputfile": "%OUTPUTDIR%/contact_sheet.jpg",
+            "size": [
+                447,
+                223
+            ]
+        }
+    },
+    "connections": [
+        [
+            "f6ea9691-85dd-4306-ab5e-67c13a3b5dab",
+            "e7636bf3-b25c-42ab-8207-407124cadd02"
+        ],
+        [
+            "75ebe495-9e84-44ee-b476-8c9bbe27ba27",
+            "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628"
+        ],
+        [
+            "488e92bc-cae2-4f65-91b1-09def1546f49",
+            "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628"
+        ],
+        [
+            "1eff159a-5760-42b9-8cc8-26fec6872a72",
+            "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628"
+        ],
+        [
+            "6db418d8-5f99-4f16-bec0-3dd2d922012a",
+            "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628"
+        ],
+        [
+            "8fd2c2fb-84a4-4754-9ed5-32ad8f8d0628",
+            "6edca0ec-c4ac-48f6-b6d1-746ff778f974"
+        ],
+        [
+            "58e38644-b367-48c3-80ac-80376bf2ae1f",
+            "6edca0ec-c4ac-48f6-b6d1-746ff778f974"
+        ],
+        [
+            "cece3d61-ca7d-4e9b-9674-eda022232969",
+            "6edca0ec-c4ac-48f6-b6d1-746ff778f974"
+        ],
+        [
+            "6edca0ec-c4ac-48f6-b6d1-746ff778f974",
+            "f6ea9691-85dd-4306-ab5e-67c13a3b5dab"
+        ]
+    ],
+    "environment": {
+        "OUTPUTDIR": "%USERPROFILE%\\Desktop",
+        "THUMBHEIGHT": "512",
+        "THUMBWIDTH": "512"
+    },
+    "notes": {
+        "text": "Use `winget` in a cmd.exe terminal to install Imagemagick:\n\nwinget install ImageMagick.Q16-HDRI\n\nDrag-n-drop a single image into the scene and hit Execute."
+    }
+}
