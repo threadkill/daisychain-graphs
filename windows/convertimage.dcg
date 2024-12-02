@@ -1,0 +1,113 @@
+{
+    "nodes": {
+        "15c2af87-8185-4ad9-ad6b-bbecf06f05fb": {
+            "type": "command",
+            "name": "convert",
+            "position": [
+                -986.2041625976563,
+                563.272705078125
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% %OUTPUT%",
+            "batch": false,
+            "outputfile": "%INPUT:.jpg=%.png",
+            "size": [
+                621,
+                130
+            ]
+        },
+        "3bbba973-8a55-4751-981f-e27c9fac958c": {
+            "type": "command",
+            "name": "convert",
+            "position": [
+                -984.1305541992188,
+                816.2518920898438
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% %OUTPUT%",
+            "batch": false,
+            "outputfile": "%INPUT:.jpg=%.png",
+            "size": [
+                621,
+                130
+            ]
+        },
+        "43e64e54-eedd-4044-bc94-84ce13b17f43": {
+            "type": "command",
+            "name": "convert",
+            "position": [
+                -975.836181640625,
+                1054.7159423828125
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% %OUTPUT%",
+            "batch": false,
+            "outputfile": "%INPUT:.jpg=%.png",
+            "size": [
+                621,
+                130
+            ]
+        },
+        "7a1545b5-283c-43dd-9609-6831c57d7313": {
+            "type": "filter",
+            "name": "",
+            "position": [
+                0.0,
+                0.0
+            ],
+            "filter": "*.jpg",
+            "regex": false,
+            "negate": false,
+            "size": [
+                200,
+                50
+            ]
+        },
+        "a26a6e01-88b0-4a2b-9be6-47e351a763a4": {
+            "type": "command",
+            "name": "convert",
+            "position": [
+                -991.7561645507813,
+                337.26629638671875
+            ],
+            "command": "%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps\\magick.exe %INPUT% %OUTPUT%",
+            "batch": false,
+            "outputfile": "%INPUT:.jpg=%.png",
+            "size": [
+                621,
+                130
+            ]
+        },
+        "b2cae32f-2e61-4428-ad76-6d12567d5b0a": {
+            "type": "distro",
+            "name": "",
+            "position": [
+                -1296.0,
+                727.8336181640625
+            ]
+        }
+    },
+    "connections": [
+        [
+            "7a1545b5-283c-43dd-9609-6831c57d7313",
+            "b2cae32f-2e61-4428-ad76-6d12567d5b0a"
+        ],
+        [
+            "b2cae32f-2e61-4428-ad76-6d12567d5b0a",
+            "a26a6e01-88b0-4a2b-9be6-47e351a763a4"
+        ],
+        [
+            "b2cae32f-2e61-4428-ad76-6d12567d5b0a",
+            "15c2af87-8185-4ad9-ad6b-bbecf06f05fb"
+        ],
+        [
+            "b2cae32f-2e61-4428-ad76-6d12567d5b0a",
+            "3bbba973-8a55-4751-981f-e27c9fac958c"
+        ],
+        [
+            "b2cae32f-2e61-4428-ad76-6d12567d5b0a",
+            "43e64e54-eedd-4044-bc94-84ce13b17f43"
+        ]
+    ],
+    "environment": null,
+    "notes": {
+        "text": ""
+    }
+}
